@@ -1,5 +1,5 @@
 {
-  "name": "sizzer-clone-yt-video",
+  "name": "music-agency",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "gsap": "^3.11.3",
-    "next": "13.0.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^14.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "swiper": "^8.4.4"
   },
   "devDependencies": {

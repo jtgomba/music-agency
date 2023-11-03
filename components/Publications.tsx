@@ -1,6 +1,5 @@
-import React from "react";
 import Image from "next/image";
-import publish from "../images/publications.png";
+import publish from "@/images/publications.png";
 
 const Publications = () => {
   return (

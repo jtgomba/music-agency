@@ -1,5 +1,3 @@
-import React from "react";
-
 const WhoWeAre = () => {
   return (
     <div className="relative my-10 px-3 py-2 h-[80vh] font-neutralFace">

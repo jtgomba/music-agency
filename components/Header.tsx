@@ -1,6 +1,8 @@
-import React, { useEffect, useRef } from "react";
-import close from "../images/close-outline.svg";
-import menu from "../images/menu-outline.svg";
+"use client";
+
+import { useEffect, useRef } from "react";
+import close from "@/images/close-outline.svg";
+import menu from "@/images/menu-outline.svg";
 import Image from "next/image";
 import gsap from "gsap";
 
@@ -12,6 +14,7 @@ const Header = () => {
   let resMenuItem3 = useRef(null);
   let resMenuItem4 = useRef(null);
   const menu_open = gsap.timeline({ paused: true, reversed: true });
+
   useEffect(() => {
     menu_open.to(resMenu.current, {
       y: 0,
@@ -35,9 +38,11 @@ const Header = () => {
       }
     );
   });
+
   function menuOpen() {
     menu_open.reversed() ? menu_open.play() : menu_open.reverse();
   }
+
   return (
     <div>
       <div

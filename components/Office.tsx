@@ -1,6 +1,5 @@
-import React from "react";
 import Image from "next/image";
-import office from "../images/home-office.png";
+import office from "@/images/home-office.png";
 
 const Office = () => {
   return (

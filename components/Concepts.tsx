@@ -1,7 +1,6 @@
-import React from "react";
 import Image from "next/image";
-import concept1 from "../images/concept1.png";
-import concept2 from "../images/concept2.png";
+import concept1 from "@/images/concept1.png";
+import concept2 from "@/images/concept2.png";
 
 const Concepts = () => {
   return (

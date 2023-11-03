@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import imageSlider1 from "../images/imageSlider1.png";
-import imageSlider2 from "../images/imageSlider2.png";
-import imageSlider3 from "../images/imageSlider3.png";
-import imageSlider4 from "../images/imageSlider4.png";
-import imageSlider5 from "../images/imageSlider5.png";
-import imageSlider6 from "../images/imageSlider6.png";
+import imageSlider1 from "@/images/imageSlider1.png";
+import imageSlider2 from "@/images/imageSlider2.png";
+import imageSlider3 from "@/images/imageSlider3.png";
+import imageSlider4 from "@/images/imageSlider4.png";
+import imageSlider5 from "@/images/imageSlider5.png";
+import imageSlider6 from "@/images/imageSlider6.png";
 import Image from "next/image";
 
 const SwiperSliderComponent = () => {
