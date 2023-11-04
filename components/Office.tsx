@@ -1,8 +1,8 @@
-import Image from "next/image";
-import office from "@/images/home-office.png";
+import React from 'react';
+import Image from 'next/image';
+import office from '@/images/home-office.png';
 
-const Office = () => {
-  return (
+const Office = () => (
     <div className="relative h-fit font-neutralFace w-full py-5 px-3">
       <div className="w-full h-[2px] bg-white"> </div>
       <div className="py-10 flex flex-col">
@@ -24,7 +24,7 @@ const Office = () => {
           <span className="text-xl font-normal mt-2 mx-5">(9:34PM)</span>
         </h1>
       </div>
-      <div className="w-full h-[2px] bg-white"></div>
+      <div className="w-full h-[2px] bg-white" />
       <div className="flex flex-col lg:flex-row justify-between py-10 pb-32 ">
         <div className="text-lg">
           (LETS HEAR <br /> SOMETHING)
@@ -33,9 +33,8 @@ const Office = () => {
           M-AGENCY.COM
         </div>
       </div>
-      <div className="w-full h-[3px] bg-white"></div>
+      <div className="w-full h-[3px] bg-white" />
     </div>
   );
-};
 
 export default Office;

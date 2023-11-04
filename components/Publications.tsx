@@ -1,11 +1,11 @@
-import Image from "next/image";
-import publish from "@/images/publications.png";
+import React from 'react';
+import Image from 'next/image';
+import publish from '@/images/publications.png';
 
-const Publications = () => {
-  return (
+const Publications = () => (
     <div className="relative font-neutralFace">
       <div className="px-3">
-        <div className="w-full h-[1px] bg-white"></div>
+        <div className="w-full h-[1px] bg-white" />
         <div className="flex text-xl md:text-4xl my-3 font-bold justify-between mb-36 w-full">
           <div>MEET US</div>
           <div>SERVICES</div>
@@ -23,7 +23,7 @@ const Publications = () => {
               <p className="underline">EXPLORE PUBLICATION</p>
             </div>
             <div className="h-[10%] flex w-full justify-center items-center flex-col">
-              <div className="w-full h-[2px] bg-black"></div>
+              <div className="w-full h-[2px] bg-black" />
               <div className="text-4xl my-3 font-bold ">OUR PUBLICATIONS</div>
             </div>
           </div>
@@ -38,6 +38,5 @@ const Publications = () => {
       </div>
     </div>
   );
-};
 
 export default Publications;

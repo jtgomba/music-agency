@@ -1,33 +1,74 @@
 @font-face {
-  font-family: "Monument Extended";
+  font-family: 'Monument Extended';
   font-style: normal;
   font-weight: 400;
-  src: local("Monument Extended"),
-    url("https://fonts.cdnfonts.com/s/19595/MonumentExtended-Regular.woff")
-      format("woff");
+  src:
+    local('Monument Extended'),
+    url('https://fonts.cdnfonts.com/s/19595/MonumentExtended-Regular.woff')
+      format('woff');
 }
 @font-face {
-  font-family: "Monument Extended";
+  font-family: 'Monument Extended';
   font-style: normal;
   font-weight: 800;
-  src: local("Monument Extended"),
-    url("https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff")
-      format("woff");
+  src:
+    local('Monument Extended'),
+    url('https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff')
+      format('woff');
 }
 @font-face {
-  font-family: "Neutral Face";
+  font-family: 'Neutral Face';
   font-style: normal;
   font-weight: 400;
-  src: local("Neutral Face"),
-    url("../fonts/neutralface-webfont.woff") format("woff");
+  src:
+    local('Neutral Face'),
+    url('../fonts/neutralface-webfont.woff') format('woff');
 }
 @font-face {
-  font-family: "Neutral Face";
+  font-family: 'Neutral Face';
   font-style: normal;
   font-weight: 800;
-  src: local("Neutral Face"),
-    url("../fonts/neutralface-bold-webfont.woff") format("woff");
+  src:
+    local('Neutral Face'),
+    url('../fonts/neutralface-bold-webfont.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Berthold Akzidenz Grotesk Medium';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local('Berthold Akzidenz Grotesk Medium'),
+    url('../fonts/Berthold-Akzidenz-Grotesk-Medium.woff') format('woff');
+}
+
+/* @font-face {
+  font-family: 'SegoeUI';
+  font-weight: 400;
+  font-style: normal;
+  src:
+    local('Segoe UI'),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2)
+      format('woff2'),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff)
+      format('woff'),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf)
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'SegoeUI';
+  font-weight: 700;
+  font-style: bold;
+  src:
+    local('Segoe UI Semibold'),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff2)
+      format('woff2'),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff)
+      format('woff'),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.ttf)
+      format('truetype');
+} */
 
 @tailwind base;
 @tailwind components;

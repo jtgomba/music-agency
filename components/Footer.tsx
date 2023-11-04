@@ -1,5 +1,6 @@
-const Footer = () => {
-  return (
+import React from 'react';
+
+const Footer = () => (
     <div className="relative font-neutralFace px-3">
       <div className="hidden lg:block mb-[10vh]">
         <div className="mx-1 font-monument font-semibold py-10 text-[13.2vmax] my-1 leading-none">
@@ -24,7 +25,7 @@ const Footer = () => {
           OFFICE
         </div>
       </div>
-      <div className="w-full h-[2px] bg-white"></div>
+      <div className="w-full h-[2px] bg-white" />
       <div className="flex flex-col lg:flex-row lg:mt-20 mb-2 items-start lg:items-end justify-between">
         <div className="my-5 lg:my-0">COPYRIGHT 2023 - TS</div>
         <div>JOBS</div>
@@ -41,6 +42,5 @@ const Footer = () => {
       </div>
     </div>
   );
-};
 
 export default Footer;
