@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Image from 'next/image';
@@ -11,156 +11,150 @@ import imageSlider4 from '@/images/imageSlider4.png';
 import imageSlider5 from '@/images/imageSlider5.png';
 import imageSlider6 from '@/images/imageSlider6.png';
 
-const SwiperSliderComponent = () => {
-  const [slides, setSlides] = useState(0);
-  useEffect(() => {
-    const w = window.innerWidth;
-    if (w < 768) {
-      setSlides(1.2);
-    } else {
-      setSlides(1.5);
-    }
-  }, []);
-  return (
-    <div className="relative">
-      <Swiper
-        spaceBetween={0}
-        slidesPerView={slides}
-        grabCursor
-        className="w-full font-segoe relative mt-[40vh] md:mt-[33vh]"
-      >
-        <SwiperSlide className="flex justify-start flex-col w-fit">
-          <div className="h-full flex items-end">
-            <Image
-              alt=""
-              src={imageSlider1}
-              className="w-full md:w-[80%] h-full object-contain"
-              priority
-            />
+const SwiperSliderComponent = () => (
+  <div className="relative">
+    <Swiper
+      spaceBetween={0}
+      slidesPerView="auto"
+      grabCursor
+      className="relative mt-[40vh] w-full font-segoe md:mt-[33vh]"
+    >
+      <SwiperSlide className="flex w-1/3 flex-col justify-start">
+        <div className="flex h-full items-end">
+          <Image
+            alt=""
+            src={imageSlider1}
+            className="h-full w-full object-contain md:w-[80%]"
+            priority
+          />
+        </div>
+        <div className="flex">
+          <div className="flex flex-col justify-between px-2 py-1 text-xs">
+            <p>MULTIPLE PROJECTS</p>
+            <p>(01)</p>
           </div>
-          <div className="flex">
-            <div className="flex flex-col justify-between py-1 px-2 text-xs">
-              <p>MULTIPLE PROJECTS</p>
-              <p>(01)</p>
-            </div>
-            <div>
-              <h2 className="text-5xl md:text-7xl lg:text-9xl 2xl:text-[12rem] leading-none tracking-tighter">
-                HEINEKEN
-              </h2>
-            </div>
+          <div>
+            <h2 className="text-5xl leading-none tracking-tighter md:text-7xl lg:text-9xl 2xl:text-[12rem]">
+              HEINEKEN
+            </h2>
           </div>
-        </SwiperSlide>
-        <SwiperSlide className="flex justify-start flex-col-reverse w-fit">
-          <div className="h-full flex items-end">
-            <Image
-              alt=""
-              src={imageSlider2}
-              className="w-full md:w-[80%] h-full object-contain"
-            />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="flex w-fit flex-col-reverse justify-start">
+        <div className="flex h-full items-end">
+          <Image
+            alt=""
+            src={imageSlider2}
+            className="h-full w-full object-contain md:w-[80%]"
+          />
+        </div>
+        <div className="flex">
+          <div className="flex flex-col justify-between px-2 py-1 text-xs">
+            <p>
+              <span className="text-red-700">G-STAR Raw</span>
+              <br />
+              1:00
+            </p>
+            <p>(02)</p>
           </div>
-          <div className="flex">
-            <div className="flex flex-col justify-between py-1 px-2 text-xs">
-              <p>
-                <span className="text-red-700">G-STAR Raw</span>
-                <br /> 1:00
-              </p>
-              <p>(02)</p>
-            </div>
-            <div className="text-5xl md:text-7xl lg:text-9xl leading-none">
-              G-STAR RAW
-            </div>
+          <div className="text-5xl leading-none md:text-7xl lg:text-9xl">
+            G-STAR RAW
           </div>
-        </SwiperSlide>
-        <SwiperSlide className="flex justify-start flex-col w-fit">
-          <div className="h-full flex items-end">
-            <Image
-              alt=""
-              src={imageSlider3}
-              className="w-full md:w-[80%] h-full object-contain"
-            />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="flex w-fit flex-col justify-start">
+        <div className="flex h-full items-end">
+          <Image
+            alt=""
+            src={imageSlider3}
+            className="h-full w-full object-contain md:w-[95%]"
+          />
+        </div>
+        <div className="flex">
+          <div className="flex flex-col justify-between px-2 py-1 text-xs">
+            <p>
+              <span className="text-red-700">SKODA</span>
+              <br />
+              2:01
+            </p>
+            <p>(03)</p>
           </div>
-          <div className="flex">
-            <div className="flex flex-col justify-between py-1 px-2 text-xs">
-              <p>
-                <span className="text-red-700">SKODA</span>
-                <br /> 2:01
-              </p>
-              <p>(03)</p>
-            </div>
-            <div className="text-5xl md:text-7xl lg:text-9xl 2xl:text-[12rem] leading-none tracking-tighter">
-              SKODA
-            </div>
-            <div />
+          <div className="text-5xl leading-none tracking-tighter md:text-7xl lg:text-9xl 2xl:text-[12rem]">
+            SKODA
           </div>
-        </SwiperSlide>
-        <SwiperSlide className="flex justify-start flex-col-reverse w-fit">
-          <div className="h-full flex items-end">
-            <Image
-              alt=""
-              src={imageSlider4}
-              className="w-full md:w-[60%] h-full object-cover"
-            />
+          <div />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="flex w-fit flex-col-reverse justify-start">
+        <div className="flex h-full items-end">
+          <Image
+            alt=""
+            src={imageSlider4}
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="flex">
+          <div className="flex flex-col justify-between px-2 py-1 text-xs">
+            <p>
+              <span className="text-red-700">PUBLICIS MILAN</span>
+              <br />
+              1:10
+            </p>
+            <p>(04)</p>
           </div>
-          <div className="flex">
-            <div className="flex flex-col justify-between py-1 px-2 text-xs">
-              <p>
-                <span className="text-red-700">PUBLICIS MILAN</span>
-                <br /> 1:10
-              </p>
-              <p>(04)</p>
-            </div>
-            <div className="text-5xl md:text-7xl 2xl:text-[12rem] lg:text-9xl leading-none tracking-tighter">
-              DIESEL
-            </div>
-            <div />
+          <div className="text-5xl leading-none tracking-tighter md:text-7xl lg:text-9xl 2xl:text-[12rem]">
+            DIESEL
           </div>
-        </SwiperSlide>
-        <SwiperSlide className="flex justify-start flex-col w-fit">
-          <div className="h-full flex items-end">
-            <Image
-              alt=""
-              src={imageSlider5}
-              className="w-full md:w-[60%] h-full object-contain"
-            />
+          <div />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="flex w-fit flex-col justify-start">
+        <div className="flex h-full items-end">
+          <Image
+            alt=""
+            src={imageSlider5}
+            className="h-full w-full object-contain md:w-[60%]"
+          />
+        </div>
+        <div className="flex">
+          <div className="flex flex-col justify-between px-2 py-1 text-xs">
+            <p>
+              <span className="text-red-700">BARBARA BOLOGNA</span>
+              <br />
+              14:14
+            </p>
+            <p>(05)</p>
           </div>
-          <div className="flex">
-            <div className="flex flex-col justify-between text-xs py-1 px-2">
-              <p>
-                <span className="text-red-700">BARBARA BOLOGNA</span>
-                <br /> 14:14
-              </p>
-              <p>(05)</p>
-            </div>
-            <div className="text-5xl md:text-7xl 2xl:text-[12rem] lg:text-9xl leading-none tracking-tighter">
-              EMBODIMENT
-            </div>
+          <div className="text-5xl leading-none tracking-tighter md:text-7xl lg:text-9xl 2xl:text-[12rem]">
+            EMBODIMENT
           </div>
-        </SwiperSlide>
-        <SwiperSlide className="flex justify-start flex-col-reverse w-fit">
-          <div className="h-full flex items-end">
-            <Image
-              alt=""
-              src={imageSlider6}
-              className="w-full md:w-[65%] h-full object-contain"
-            />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="flex w-fit flex-col-reverse justify-start">
+        <div className="flex h-full items-end">
+          <Image
+            alt=""
+            src={imageSlider6}
+            className="h-full w-full object-contain md:w-[65%]"
+          />
+        </div>
+        <div className="flex">
+          <div className="flex flex-col justify-between px-2 py-1 text-xs">
+            <p>
+              <span className="text-red-700">PUBLICIS</span>
+              <br />
+              1:17
+            </p>
+            <p>(06)</p>
           </div>
-          <div className="flex">
-            <div className="flex flex-col justify-between text-xs py-1 px-2">
-              <p>
-                <span className="text-red-700">PUBLICIS</span>
-                <br /> 1:17
-              </p>
-              <p>(06)</p>
-            </div>
-            <div className="text-5xl md:text-7xl 2xl:text-[12rem] lg:text-9xl leading-none tracking-tighter">
-              MERCEDES
-            </div>
-            <div />
+          <div className="text-5xl leading-none tracking-tighter md:text-7xl lg:text-9xl 2xl:text-[12rem]">
+            MERCEDES
           </div>
-        </SwiperSlide>
-      </Swiper>
-    </div>
-  );
-};
+          <div />
+        </div>
+      </SwiperSlide>
+    </Swiper>
+  </div>
+);
 
 export default SwiperSliderComponent;

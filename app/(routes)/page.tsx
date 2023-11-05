@@ -31,7 +31,7 @@ const Home = () => {
   return (
     <main>
       {loaderFinished ? (
-        <div className="uppercase text-[#e7e7e7] ">
+        <div className="uppercase text-[#e7e7e7]">
           <Header />
           <SwiperSliderComponent />
           <WhoWeAre />
@@ -42,7 +42,7 @@ const Home = () => {
           <Footer />
         </div>
       ) : (
-        <Loader timeline={timeline.current} />
+        <Loader timeline={timeline} />
       )}
     </main>
   );

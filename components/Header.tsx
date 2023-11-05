@@ -51,20 +51,21 @@ const Header = () => {
     <div>
       <div
         ref={resMenu}
-        className="fixed w-full top-0 left-0 overflow-hidden h-screen bg-black -translate-y-[1200px]"
+        className="fixed left-0 top-0 h-screen w-full translate-y-[-1200px] overflow-hidden bg-black"
       >
         <div
-          className="flex items-start justify-between w-[100%] h-fit py-[5px]"
+          className="flex h-fit w-[100%] items-start justify-between py-[5px]"
           ref={resMenuHeader}
         >
-          <div className="mx-[5px] mix-blend-difference font-monument font-semibold text-[20px] leading-none">
-            M <br />
+          <div className="mx-[5px] font-monument text-[20px] font-semibold leading-none mix-blend-difference">
+            M
+            <br />
             AGENCY
           </div>
           <div
             onClick={menuOpen}
             onKeyDown={menuOpen}
-            className="block md:hidden cursor-pointer mx-[5px]"
+            className="mx-[5px] block cursor-pointer md:hidden"
             role="button"
             tabIndex={0}
             aria-label="menu"
@@ -77,63 +78,65 @@ const Header = () => {
           </div>
         </div>
         <div className="mx-2 my-10 space-y-1">
-          <span className="overflow-hidden block">
+          <span className="block overflow-hidden">
             <div
               ref={resMenuItem1}
-              className="font-berthold font-light text-4xl"
+              className="font-berthold text-4xl font-light"
             >
               WORK
             </div>
           </span>
-          <span className="overflow-hidden block">
+          <span className="block overflow-hidden">
             <div
               ref={resMenuItem2}
-              className="font-berthold font-light text-4xl"
+              className="font-berthold text-4xl font-light"
             >
               ABOUT
             </div>
           </span>
-          <span className="overflow-hidden block">
+          <span className="block overflow-hidden">
             <div
               ref={resMenuItem3}
-              className="font-berthold font-light text-4xl"
+              className="font-berthold text-4xl font-light"
             >
               PUBLICATIONS
             </div>
           </span>
-          <span className="overflow-hidden block">
+          <span className="block overflow-hidden">
             <div
               ref={resMenuItem4}
-              className="font-berthold font-light text-4xl"
+              className="font-berthold text-4xl font-light"
             >
               OFFICE
             </div>
           </span>
         </div>
       </div>
-      <div className="absolute bg-black top-0 py-[5px] h-[20vh] flex justify-between w-[100%] flex-col">
+      <div className="absolute top-0 flex h-[20vh] w-[100%] flex-col justify-between bg-black py-[5px]">
         <div
           id="header"
-          className="flex items-start justify-between w-[100%] h-fit"
+          className="flex h-fit w-[100%] items-start justify-between"
         >
-          <div className="mx-[5px] mix-blend-difference font-monument font-semibold text-[20px] leading-none">
-            M <br /> AGENCY
+          <div className="mx-[5px] font-monument text-[20px] font-semibold leading-none mix-blend-difference">
+            M
+            <br />
+            AGENCY
           </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-berthold font-light text-4xl">
+          <div className="mx-1 hidden font-berthold text-4xl font-light mix-blend-difference md:block">
             WORK
           </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-berthold font-light text-4xl">
+          <div className="mx-1 hidden font-berthold text-4xl font-light mix-blend-difference md:block">
             ABOUT
           </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-berthold font-light text-4xl">
+          <div className="mx-1 hidden font-berthold text-4xl font-light mix-blend-difference md:block">
             PUBLICATIONS
           </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-berthold font-light text-4xl">
+          <div className="mx-1 hidden font-berthold text-4xl font-light mix-blend-difference md:block">
             OFFICE
           </div>
           <div
             onClick={menuOpen}
-            className="block md:hidden cursor-pointer mx-[5px]"
+            className="mx-[5px] block cursor-pointer md:hidden"
             onKeyDown={menuOpen}
             role="button"
             tabIndex={0}
@@ -146,9 +149,11 @@ const Header = () => {
             />
           </div>
         </div>
-        <div className="flex items-start text-xs font-light font-segoe justify-between sm:justify-evenly px-5 w-[100%] h-fit">
+        <div className="flex h-fit w-[100%] items-start justify-between px-5 font-segoe text-xs font-light sm:justify-evenly">
           <div>
-            An independent <br /> music agency
+            An independent
+            <br />
+            music agency
           </div>
           <div>Amsterdam</div>
         </div>

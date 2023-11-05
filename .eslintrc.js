@@ -1,9 +1,11 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es2021: true,
   },
   extends: [
+    'plugin:tailwindcss/recommended',
     'plugin:react/recommended',
     'airbnb',
     'airbnb-typescript',
@@ -47,11 +49,22 @@ module.exports = {
         extensions: ['.jsx', '.tsx'],
       },
     ],
+    'comma-dangle': 'off',
+    '@typescript-eslint/comma-dangle': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: false,
+        optionalDependencies: false,
+        peerDependencies: false,
+        packageDir: './',
+      },
+    ],
   },
   settings: {
     'import/resolver': {
       node: {
-        paths: ['src'],
+        paths: ['./'],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },

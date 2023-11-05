@@ -1,18 +1,22 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, MutableRefObject } from 'react';
 import { words } from './data';
 
 import styles from './Loader.module.css';
 import { introAnimation, collapseWords, progressAnimation } from './animations';
 
-const Loader = ({ timeline }: { timeline: gsap.core.Timeline | undefined }) => {
+const Loader = ({
+  timeline,
+}: {
+  timeline: MutableRefObject<gsap.core.Timeline | undefined>;
+}) => {
   const loaderRef = useRef(null);
   const progressRef = useRef(null);
   const progressNumberRef = useRef(null);
   const wordGroupsRef = useRef(null);
 
   useEffect(() => {
-    if (timeline) {
-      timeline
+    if (timeline.current) {
+      timeline.current
         .add(introAnimation(wordGroupsRef))
         .add(progressAnimation(progressRef, progressNumberRef), 0)
         .add(collapseWords(loaderRef));
