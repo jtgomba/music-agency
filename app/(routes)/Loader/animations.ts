@@ -16,7 +16,7 @@ export const collapseWords = (wordGroupsRef: MutableRefObject<null>) => {
   const tl = gsap.timeline();
   tl.to(wordGroupsRef.current, {
     'clip-path': 'polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)',
-    duration: 3,
+    duration: 1,
     ease: 'expo.inOut',
   });
 

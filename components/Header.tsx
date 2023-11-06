@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useLayoutEffect } from 'react';
 import Image from 'next/image';
-import gsap from 'gsap';
+import { gsap } from 'gsap';
 import close from '@/images/close-outline.svg';
 import menu from '@/images/menu-outline.svg';
 
@@ -13,7 +13,10 @@ const Header = () => {
   const resMenuItem2 = useRef(null);
   const resMenuItem3 = useRef(null);
   const resMenuItem4 = useRef(null);
-  const menuOpenTl = gsap.timeline({ paused: true, reversed: true });
+  const menuOpenTl = gsap.timeline({
+    paused: true,
+    reversed: true,
+  });
 
   useEffect(() => {
     menuOpenTl.to(resMenu.current, {
@@ -37,7 +40,7 @@ const Header = () => {
         y: -50,
       }
     );
-  });
+  }, []);
 
   function menuOpen() {
     if (menuOpenTl.reversed()) {
@@ -46,6 +49,39 @@ const Header = () => {
       menuOpenTl.reverse();
     }
   }
+
+  const timeline = useRef<gsap.core.Timeline>();
+
+  useLayoutEffect(() => {
+    const context = gsap.context(() => {
+      timeline.current = gsap.timeline();
+      timeline.current
+        .fromTo(
+          '[data-menu-item]',
+          { y: '-100%', opacity: 0 },
+          {
+            opacity: 1,
+            y: '0%',
+            duration: 1.2,
+            ease: 'power4.inOut',
+            stagger: 0.15,
+          }
+        )
+        .fromTo(
+          '[data-subtitle]',
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+            duration: 1.2,
+          },
+          '<'
+        );
+    });
+
+    return () => context.revert();
+  }, []);
 
   return (
     <div>
@@ -117,21 +153,36 @@ const Header = () => {
           id="header"
           className="flex h-fit w-[100%] items-start justify-between"
         >
-          <div className="mx-[5px] font-monument text-[20px] font-semibold leading-none mix-blend-difference">
+          <div
+            data-menu-item
+            className="mx-[5px] font-monument text-[20px] font-semibold leading-none mix-blend-difference"
+          >
             M
             <br />
             AGENCY
           </div>
-          <div className="mx-1 hidden font-berthold text-4xl font-light mix-blend-difference md:block">
+          <div
+            data-menu-item
+            className="mx-1 hidden font-berthold text-4xl font-light mix-blend-difference md:block"
+          >
             WORK
           </div>
-          <div className="mx-1 hidden font-berthold text-4xl font-light mix-blend-difference md:block">
+          <div
+            data-menu-item
+            className="mx-1 hidden font-berthold text-4xl font-light mix-blend-difference md:block"
+          >
             ABOUT
           </div>
-          <div className="mx-1 hidden font-berthold text-4xl font-light mix-blend-difference md:block">
+          <div
+            data-menu-item
+            className="mx-1 hidden font-berthold text-4xl font-light mix-blend-difference md:block"
+          >
             PUBLICATIONS
           </div>
-          <div className="mx-1 hidden font-berthold text-4xl font-light mix-blend-difference md:block">
+          <div
+            data-menu-item
+            className="mx-1 hidden font-berthold text-4xl font-light mix-blend-difference md:block"
+          >
             OFFICE
           </div>
           <div
@@ -149,7 +200,10 @@ const Header = () => {
             />
           </div>
         </div>
-        <div className="flex h-fit w-[100%] items-start justify-between px-5 font-segoe text-xs font-light sm:justify-evenly">
+        <div
+          data-subtitle
+          className="flex h-fit w-[100%] items-start justify-between px-5 font-segoe text-xs font-light sm:justify-evenly"
+        >
           <div>
             An independent
             <br />
